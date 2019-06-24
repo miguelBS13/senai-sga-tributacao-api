@@ -29,7 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/teste").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin();
+                .httpBasic();
     }
 
     @Override //configurar arquivos estaticos da aplicação
